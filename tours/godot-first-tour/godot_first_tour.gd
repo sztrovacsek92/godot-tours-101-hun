@@ -73,12 +73,12 @@ func steps_010_intro() -> void:
 	bubble_set_background(TEXTURE_BUBBLE_BACKGROUND)
 	bubble_add_texture(TEXTURE_GDQUEST_LOGO)
 	bubble_set_title("")
-	bubble_add_text([bbcode_wrap_font_size("[center][b]Welcome to Godot[/b][/center]", 32)])
+	bubble_add_text([bbcode_wrap_font_size("[center][b]Üdvözöl a Godot Engine![/b][/center]", 32)])
 	bubble_add_text(
-		["[center]In this tour, you take your first steps in the [b]Godot editor[/b].[/center]",
-		"[center]You get an overview of the engine's four pillars: [b]Scenes[/b], [b]Nodes[/b], [b]Scripts[/b], and [b]Signals[/b].[/center]",
-	"[center]In the next tour, you'll get to assemble your first game from premade parts and put all this into practice.[/center]",
-	"[center][b]Let's get started![/b][/center]",]
+		["[center]Ez a túra segít megtenni az első lépéseket\na [b]Godot Engine[/b]-ben.[/center]",
+		"[center]Kapsz egy áttekintést a 4 alappillérről,\nmelyek a következők:\n[b]Scene[/b]-ek, [b]Node[/b]-ok, [b]Script[/b]-ek, és [b]Signal[/b]-ok.[/center]",
+	"[center]A következő túrán majd létrehozod az első saját játékod, előre elkészített elemekből,\nhogy mindezt a gyakorlatban is lásd.[/center]",
+	"[center][b]Vágjunk is bele![/b][/center]",]
 	)
 	bubble_set_footer(CREDITS_FOOTER_GDQUEST)
 	queue_command(bubble.avatar.do_wink)
@@ -90,11 +90,11 @@ func steps_010_intro() -> void:
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
 	bubble_add_task_press_button(interface.run_bar_play_button)
-	bubble_set_title("Try the game")
+	bubble_set_title("Próbáld ki a játékot")
 	bubble_add_text(
-		["When a project is first opened in Godot, we land on the [b]Main Scene[/b]. It is the entry point of a Godot game.",
-		"Click the play icon in the top right of the editor to run the Godot project.",
-		"Then, press [b]F8[/b] on your keyboard or close the game window to stop the game.",]
+		["Ha először nyitsz meg egy projektet a Godot Engine-ben, akkor a [b]Main Scene[/b] lesz aktív. Ez a Godot játékok belépőpontja.",
+		"Kattints a [b]Play[/b] ikonra az [b]Editor[/b] jobb felső sarkában, hogy elindítsd a játékot.",
+		"Ezután nyomd meg az [b]F8[/b]-at a billentyűzeten, vagy zárd be az ablakot, hogy leállítsd a játékot.",]
 	)
 	complete_step()
 
@@ -102,9 +102,9 @@ func steps_010_intro() -> void:
 	# 0030: Start of editor tour
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("Editor tour")
+	bubble_set_title("Az Editor")
 	bubble_add_text(
-		["Great! Now let's take a quick tour of the editor.",]
+		["Nagyszerű! Most járjuk körbe az [b]Editor[/b]-t.",]
 	)
 	queue_command(func():
 		interface.bottom_button_output.button_pressed = false
@@ -117,19 +117,19 @@ func steps_020_first_look() -> void:
 	highlight_controls([interface.canvas_item_editor])
 	bubble_move_and_anchor(interface.inspector_dock, Bubble.At.BOTTOM_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
-	bubble_set_title("The viewport")
+	bubble_set_title("A Viewport")
 	bubble_add_text(
-		["The central part of the editor outlined in blue is the viewport. It's a view of the currently open [b]scene[/b].",]
+		["Az [b]Editor[/b] központi része a kékkel keretezett [b]Viewport[/b]. Itt láthatod az éppen nyitott [b]scene[/b]-t.",]
 	)
 	complete_step()
 
 
 	# 0041: scene explanation
 	highlight_controls([interface.canvas_item_editor])
-	bubble_set_title("A scene is a reusable template")
+	bubble_set_title("A scene egy sablon")
 	bubble_add_text(
-		["In Godot, a scene is a template that can represent anything: A character, a chest, an entire level, a menu, or even a complete game!",
-		"We are currently looking at a scene file called [b]" + scene_completed_project.get_file() + "[/b]. This scene consists of a complete game.",]
+		["A Godot Engine-ben, a [b]scene[/b] egy sablon, ami lényegében bármi lehet: egy karakter, egy kincsesláda, egy pálya, egy menü, vagy akár egy egész játék!",
+		"Jelenleg, egy [b]" + scene_completed_project.get_file() + "[/b] nevű [b]scene[/b]-t látunk. Ez a [b]scene[/b] egy egész játékot tartalmaz.",]
 	)
 	complete_step()
 
@@ -137,9 +137,9 @@ func steps_020_first_look() -> void:
 	highlight_controls([interface.scene_dock, interface.filesystem_dock, interface.inspector_dock, interface.context_switcher, interface.run_bar, interface.bottom_buttons])
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("Let's look around")
+	bubble_set_title("Nézzünk körül")
 	bubble_add_text(
-		["We're going to explore the interface next, so you get a good feel for it.",]
+		["Most nézzük a kezelőfelületet, hogy otthonosan tudj mozogni.",]
 	)
 	complete_step()
 
@@ -148,8 +148,8 @@ func steps_020_first_look() -> void:
 	highlight_controls([interface.run_bar], true)
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("Runner Buttons")
-	bubble_add_text(["Those buttons in the top-right are the Runner Buttons. You can [b]play[/b] and [b]stop[/b] the game with them."])
+	bubble_set_title("Futtató gombok")
+	bubble_add_text(["A jobb felső sarokban lévő gombok a futtató gombok. Segítségükkel elindíthatod ([b]F5 - Play[/b]) vagy leállíthatod ([b]F8 - Stop[/b]) a játékot."])
 	complete_step()
 
 
@@ -157,10 +157,10 @@ func steps_020_first_look() -> void:
 	highlight_controls([interface.context_switcher], true)
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("Context Switcher")
+	bubble_set_title("Nézet váltó")
 	bubble_add_text([
-		"Centered at the top of the editor, you find the Godot [b]Context Switcher[/b].",
-		"You can change between the different [b]Editor[/b] views here. We are currently on the [b]2D View[/b]. Later, we will switch to the [b]Script Editor[/b]!",
+		"Az [b]Editor[/b] tetején középen találod a [b]Context Switcher[/b]-t (nézet váltó).",
+		"Itt az [b]Editor[/b] különböző nézetei közt válthatsz. Jelelnleg a [b]2D View[/b] aktív. Később majd megnézzük a [b]Script Editor[/b]-t is!",
 	])
 	complete_step()
 
@@ -171,10 +171,10 @@ func steps_020_first_look() -> void:
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_LEFT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
 	bubble_set_title("Scene Dock")
-	bubble_add_text(["At the top-left, you have the [b]Scene Dock[/b]. You can see all the building blocks of a scene here.",
-		"In Godot, these building blocks are called [b]nodes[/b].",
-		"A scene is made up of one or more nodes.",
-		"There are nodes to draw images, play sounds, design animations, and more.",
+	bubble_add_text(["Balra fent található a [b]Scene Dock[/b]. Itt láthatod, miből épül fel az adott [b]scene[/b].",
+		"A Godot Engine-ben ezeket az építőelemeket [b]node[/b]-oknak hívjuk.",
+		"Egy [b]scene[/b] egy vagy több [b]node[/b]-ból épül fel.",
+		"Vannak külön [b]node[/b]-ok képek kirajzolásásra, hangok lejátszására, animációk létrehozására, és még sok másra is.",
 	])
 	complete_step()
 
@@ -183,7 +183,7 @@ func steps_020_first_look() -> void:
 	highlight_controls([interface.filesystem_dock])
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.BOTTOM_LEFT)
 	bubble_set_title("FileSystem Dock")
-	bubble_add_text(["At the bottom-left, you can see the [b]FileSystem Dock[/b]. It lists all the files used in your project (all the scenes, images, scripts...)."])
+	bubble_add_text(["Balra lent pedig a [b]FileSystem Dock[/b] található. Ez minden a projektedben lévő fájlt kilistáz (minden scene-t, képet, scriptet, stb)."])
 	complete_step()
 
 
@@ -191,9 +191,9 @@ func steps_020_first_look() -> void:
 	highlight_controls([interface.inspector_dock])
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.CENTER_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("The Inspector")
+	bubble_set_title("Az Inspector")
 	bubble_add_text([
-		"On the right, we have the [b]Inspector Dock[/b]. In this dock, you can view and edit the properties of selected nodes.",
+		"Jobb oldalon található az [b]Inspector Dock[/b]. Itt láthatod és szerkesztheted a kijelölt [b]node[/b]-ok tulajdonságait.",
 	])
 	complete_step()
 
@@ -204,9 +204,9 @@ func steps_020_first_look() -> void:
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
 	bubble_set_avatar_surprised()
-	bubble_set_title("Try the Inspector")
+	bubble_set_title("Próbáld ki")
 	bubble_add_text([
-		"Try the [b]Inspector[/b]! Click on the different nodes in the [b]Scene Dock[/b] on the left to see their properties in the [b]Inspector[/b] on the right.",
+		"Próbáld ki az [b]Inspector[/b]-t! Kattints a különböző [b]node[/b]-okra bal oldalon a [b]Scene Dock[/b]-ban, hogy láthasd a tulajdonságaikat a jobb oldalon lévő [b]Inspector[/b]-ban.",
 	])
 	mouse_click()
 	mouse_move_by_callable(
@@ -226,11 +226,11 @@ func steps_020_first_look() -> void:
 	highlight_controls([interface.debugger])
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.BOTTOM_CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("The Bottom Panels")
+	bubble_set_title("Alsó panelek")
 	bubble_add_text([
-		"At the bottom, you'll find editors like the [b]Output[/b] and [b]Debugger[/b] panels.",
-		"That's where you'll edit animations, write visual effects code (shaders), and more.",
-		"These editors are contextual. We'll see what that means in the next tour.",
+		"Lent különböző paneleket láthatsz, mint például az [b]Output[/b] vagy a [b]Debugger[/b] panel.",
+		"Itt tudsz többek közt animációkat létrehozni vagy shader kódot írni.",
+		"Ezek a panelek kontextus függők. A következó túrán majd kiderül, hogy ez mit is jelent pontosan.",
 	])
 	queue_command(func debugger_open():
 		interface.bottom_button_debugger.button_pressed = true
@@ -248,10 +248,10 @@ func steps_030_opening_scene() -> void:
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_LEFT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
 	highlight_scene_nodes(["Main", "Main/Bridges", "Main/InvisibleWalls", "Main/UILayer"])
-	bubble_set_title("The complete scene's nodes")
+	bubble_set_title("A teljes scene node-jai")
 	bubble_add_text([
-		"This completed game scene has four [b]nodes[/b]: [b]Main[/b], [b]Bridges[/b], [b]InvisibleWalls[/b], and [b]UILayer[/b].",
-		"We can see that in the [b]Scene Dock[/b] at the top-left."
+		"Ez a teljes játék [b]scene[/b] 4 [b]node[/b]-ból áll: [b]Main[/b], [b]Bridges[/b], [b]InvisibleWalls[/b], és [b]UILayer[/b].",
+		"Ezt láthatjuk a [b]Scene Dock[/b]-ban, balra fent."
 	])
 	complete_step()
 
@@ -259,15 +259,15 @@ func steps_030_opening_scene() -> void:
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_LEFT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
 	highlight_scene_nodes(["Main/Player"])
-	bubble_set_title("Scene instances")
+	bubble_set_title("Scene példányok")
 	bubble_add_text([
-		"Other elements, like the [b]Player[/b], have an [b]Open In Editor[/b] " +
-		bbcode_generate_icon_image_string(ICONS_MAP.open_in_editor) + " icon.",
-		"When you see this icon, you are looking at a [b]scene instance[/b]. It's a copy of another scene. You can think of it as a scene that uses another scene as its template. In Godot, we nest scene instances to create complete games.",
-		"Click the [b]Open in Editor[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.open_in_editor) + " icon next to the [b]Player[/b] node in the [b]Scene Dock[/b] to open the Player scene.",
+		"A többi [b]node[/b] mellett, mint például a [b]Player[/b], van egy [b]Open In Editor[/b] " +
+		bbcode_generate_icon_image_string(ICONS_MAP.open_in_editor) + " ikon.",
+		"Ha ezt látod, akkor egy [b]scene példánnyal[/b] (instance) van dolgod. Ez egy már meglévő [b]scene[/b] másolata, de úgy is gondolhatsz rá, mint egy [b]scene[/b], ami egy másik [b]scene[/b]-t használ az alapjául. A Godot Engine-ben, ilyen példányok beágyazásával készítjük a játékokat.",
+		"Kattints az [b]Open in Editor[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.open_in_editor) + " ikonra, a [b]Player node[/b] mellett a [b]Scene Dock[/b]-ban, hogy megnyisd a [b]Player scene[/b]-t.",
 	])
 	bubble_add_task(
-		("Open the Player scene."),
+		("Nyisd meg a [b]Player scene[/b]-t."),
 		1,
 		func task_open_start_scene(task: Task) -> int:
 			var scene_root: Node = EditorInterface.get_edited_scene_root()
@@ -284,10 +284,10 @@ func steps_030_opening_scene() -> void:
 	highlight_controls([interface.scene_dock, interface.canvas_item_editor])
 	bubble_move_and_anchor(interface.inspector_dock, Bubble.At.BOTTOM_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
-	bubble_set_title("The Player scene")
+	bubble_set_title("A Player scene")
 	bubble_add_text([
-		"When opening a scene, the [b]Scene Dock[/b] and the viewport update to display the scene's contents.",
-		"In the Scene Dock at the top-left, you can see all the nodes that form the player's character.",
+		"Amikor megnyitsz egy [b]scene[/b]-t, a [b]Scene Dock[/b] és a [b]Viewport[/b] is frissül, hogy az új [b]scene[/b]-t mutassa.",
+		"Balra fent a [b]Scene Dock[/b]-ban láthatod az összes [b]node[/b]-ot, amiből a játékos karakter felépül.",
 	])
 	complete_step()
 
@@ -297,11 +297,11 @@ func steps_040_scripts() -> void:
 
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("Scripts bring nodes to life")
+	bubble_set_title("A scriptek keltik életre a node-okat")
 	bubble_add_text([
-		"By themselves, nodes and scenes don't interact.",
-		"To bring them to life, you need to give them instructions by writing code in a script and connecting it to the node or scene.",
-		"Let's have a look at an example of a script.",
+		"Önmagukban a [b]scene[/b]-ek és [b]node[/b]-ok nem túl interaktívak.",
+		"Ahhoz, hogy életre keltsd őket, utasításokat kell adnod, azzal, hogy kódot írsz egy [b]script[/b] fájlba és azt csatolod a [b]node[/b]-hoz vagy [b]scene[/b]-hez.",
+		"Nézzünk egy példa [b]script[/b]-et.",
 	])
 	complete_step()
 
@@ -309,13 +309,13 @@ func steps_040_scripts() -> void:
 	highlight_scene_nodes(["Player"])
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_LEFT)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("Open the Player script")
+	bubble_set_title("Nyisd meg Player scriptet")
 	bubble_add_text([
-		"The [b]Player[/b] node has a script file attached to it. We can see this thanks to the [b]Attached Script[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.script) + " icon located to the right of the node in the [b]Scene Dock[/b].",
-		"Click the script icon to open the [b]Player Script[/b] in the [b]Script Editor[/b].",
+		"A [b]Player node[/b]-hoz hozzá van rendelve egy [b]script[/b]. Ezt az [b]Attached Script[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.script) + " ikon mutatja, a [b]node[/b] neve mellett jobbra.",
+		"Kattints a [b]script[/b] ikonra, hogy megnyisd a [b]Player ccript[/b]-et a [b]Script Editor[/b]-ban.",
 	])
 	bubble_add_task(
-		"Open the script attached to the [b]Player[/b] node.",
+		"Nyisd meg a [b]Player node[/b]-hoz kapcsolt [b]script[/b]-et.",
 		1,
 		func(task: Task) -> int:
 			if not interface.is_in_scripting_context():
@@ -329,12 +329,11 @@ func steps_040_scripts() -> void:
 	highlight_controls([interface.script_editor_code_panel])
 	bubble_move_and_anchor(interface.inspector_dock, Bubble.At.BOTTOM_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
-	bubble_set_title("The scripting context")
+	bubble_set_title("A script nézet")
 	bubble_add_text([
-		"We're now in the scripting context, which displays all the code in the open script file.",
-		"This code gives instructions to the computer about how to move the character, when to play sounds, and more.",
-		"Don't worry if you can't read the code yet: We made a FREE app to help you [color=#ffd500][b][url=https://gdquest.com/tutorial/godot/learning-paths/learn-gdscript-from-zero/]Learn GDScript from Zero[/url][/b][/color]. It's a free part of our complete course Learn Gamedev From Zero.",
-		"Use your [b]Mouse Wheel[/b] to scroll up and down the file or click and drag the scrollbar on the right.",
+		"Most a [b]Script[/b] nézetben vagyunk, ahol láthatód a megnyitott [b]script[/b] fájlban lévő összes kódot.",
+		"Ez a kód mondja meg a számítógépnek, hogyan mozgassa a játékost, mikor játszon le hangot, és még sok mást.",
+		"Használd az egér görgőt vagy fogd meg a csúszkát a jobb oldalon, hogy fel-le görgesd a [b]script[/b] fájlt.",
 	])
 	complete_step()
 
@@ -342,10 +341,10 @@ func steps_040_scripts() -> void:
 	highlight_scene_nodes(["Player", "Player/GodotArmor", "Player/WeaponHolder", "Player/ShakingCamera2D"])
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_LEFT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
-	bubble_set_title("Any node can have a script")
+	bubble_set_title("Bármelyik node-nak lehet scriptje")
 	bubble_add_text([
-		"If we look back at the [b]Scene Dock[/b] at the top-left, we can see multiple nodes with script icons.",
-		"You can attach scripts to as many nodes as you need to control their behavior.",
+		"Ha ismét balra nézünk, a [b]Scene Dock[/b]-ra, láthatjuk, hogy több [b]node[/b] mellett is ott a [b]script[/b] ikon.",
+		"Annyi [b]node[/b]-hoz adhatsz [b]script[/b]-et, amennyihez csak szeretnél.",
 	])
 	complete_step()
 
@@ -355,14 +354,14 @@ func steps_050_signals() -> void:
 	highlight_controls([interface.context_switcher], true)
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("Go back to the 2D view")
+	bubble_set_title("Vissza a 2D nézetbe")
 	bubble_add_text([
-		"We have one more essential pillar of Godot to look at: [b]Signals[/b].",
-		"Let's head back to the completed project scene. First, click the 2D workspace at the top of the editor to change the center view back to the viewport.",
-		"This will show you the player character once again.",
+		"Még egy fontos pillére van a Godot Engine-nek: a [b]Signal[/b]-ok.",
+		"Térjünk vissza a befejezett [b]scene[/b]-hez. Először kattints a [b]2D[/b] nézetre az [b]Editor[/b] tetején, hogy visszatérj a [b]script[/b] nézetből.",
+		"Ez újra a játékost fogja mutatni.",
 	])
 	bubble_add_task(
-		"Navigate to the [b]2D[/b] view.",
+		"Navigálj a [b]2D[/b] nézetre.",
 		1,
 		func task_navigate_to_2d_view(task: Task) -> int:
 			return 1 if interface.canvas_item_editor.visible else 0
@@ -373,13 +372,13 @@ func steps_050_signals() -> void:
 	highlight_controls([interface.main_screen_tabs], true)
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
-	bubble_set_title("Change the active scene")
+	bubble_set_title("Válts aktív scene-t")
 	bubble_add_text([
-		"Let's change the active scene to the completed project scene.",
-		"Click on the [b]completed_project[/b] tab above the central viewport to change the scene.",
+		"Váltsuk át az aktív [b]scene[/b]-t a kész projekt [b]scene[/b]-re.",
+		"Kattints a [b]completed_project[/b] fülre, a [b]Viewport[/b] felett, hogy átválts rá.",
 	])
 	bubble_add_task(
-		"Navigate to the Completed Project scene.",
+		"Navigálj a [b]Completed Project scene[/b]-re.",
 		1,
 		func task_open_completed_project_scene(task: Task) -> int:
 			var scene_root: Node = EditorInterface.get_edited_scene_root()
@@ -393,11 +392,11 @@ func steps_050_signals() -> void:
 	scene_open(scene_completed_project)
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("Signals")
+	bubble_set_title("Signal-ok")
 	bubble_add_text([
-		"Games have buttons, doors, chests and a myriad of other elements you interact with and that you expect to respond in a specific way.",
-		"To do what you need them to do, these elements need to report events to the game to trigger the action you expect them to trigger.",
-		"We call that a signal.",
+		"A játékokban vannak gombok, ajtók, ládák, és millió más dolog amivel kapcsolatba léphetsz, és elvárod, hogy bizonyos módon reagáljon.",
+		"Ehhez, ezeknek az elemeknek jelenteniük kell az interakciót a játéknak, hogy az végrehajtsa az adott eseményt.",
+		"Ezt a jelentést [b]signal[/b] küldésnek hívjuk.",
 	])
 	complete_step()
 
@@ -405,35 +404,35 @@ func steps_050_signals() -> void:
 	highlight_controls([interface.node_dock_signals_editor])
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("Click the signal icon")
+	bubble_set_title("Kattints a signal ikonra")
 	bubble_add_text([
-		"In the [b]Scene Dock[/b] at the top-left, look at the [b]Player[/b] node.",
-		"You can see the [b]Signal Emission[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.node_signal_connected) + " icon emitting little waves. This icon tells you that the node has a signal connection.",
-		"Click the icon to open the [b]Node Dock[/b] at the right of the editor.",
+		"Figyeld meg a [b]Player node[/b]-ot a [b]Scene Dock[/b]-ban.",
+		"Láthatod, hogy a [b]Signal Emission[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.node_signal_connected) + " ikon kis hullámokat bocsájt ki. Ez az ikon jelzi, hogy az adott [b]node[/b]-hoz be van kötve egy signal.",
+		"Kattints az ikonra, hogy megnyíljon jobb oldalon a [b]Node Dock[/b].",
 	])
 	bubble_add_task_set_tab_to_title(
 		interface.inspector_tabs,
 		"Node",
-		"Click the signal emission icon next to the [b]Player[/b] node and open the [b]Node Dock[/b].")
+		"Kattints a [b]Player node[/b] melleti [b]signal[/b] ikonra, és nyisd meg a [b]Node Dock[/b]-ot.")
 	complete_step()
 
 	highlight_controls([interface.node_dock_signals_editor], true)
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.CENTER_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("The Node Dock")
+	bubble_set_title("A Node Dock")
 	bubble_add_text([
-		"On the right, you can see the [b]Node Dock[/b]. It lists all the signals of the selected node. In this case, it's the [b]Player[/b] node.",
-		"The signal list is long: nodes emit many signals, because there are many kinds of events we need to react to in a game.",
+		"Jobbra láthatod a [b]Node Dock[/b]-ot. Ez listázza a kijelölt [b]node[/b] összes [b]signal[/b]-ját. Esetünkben ez a [b]Player node[/b].",
+		"A [b]signal[/b] lista elég hosszú: a [b]node[/b]-ok sokféle [b]signal[/b]-t bocsáthatnak ki, mert a játékban is sokféle esemény lehet, amire reagálni kell.",
 	])
 	complete_step()
 
 	highlight_signals(["health_changed"], true)
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("The health_changed signal")
+	bubble_set_title("A health_changed signal")
 	bubble_add_text([
-		"The player node has one especially useful signal: [b]health_changed[/b].",
-		"The [b]health_changed[/b] signal tells us when the player takes damage or heals up.",
+		"A [b]Player node[/b]-nak van egy különösen hasznos [b]signal[/b]-ja: [b]health_changed[/b].",
+		"A [b]health_changed signal[/b] tudatja velünk, mikor sebződik a karakter vagy tölti vissza az életerejét.",
 	])
 	complete_step()
 
@@ -441,14 +440,14 @@ func steps_050_signals() -> void:
 	highlight_signals(["../UILayer"], true)
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("The signal connection")
+	bubble_set_title("A signal kapcsolat")
 	bubble_add_text([
-		"Notice the [b]Connected Signal[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.script_signal_connected) + " icon below the signal: it shows that the signal is connected to a piece of code.",
-		"It means that each time the player health changes, Godot will run the connected piece of code.",
-		"We can double-click the line with the green icon to open the connected piece of code.",
+		"Figyeld meg a [b]Connected Signal[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.script_signal_connected) + " ikont a [b]signal[/b] alatt: ez jelzi, hogy az adott [b]signal[/b] hozzá van kötve egy [b]script[/b]-hez.",
+		"Ez azt jelent, hogy mindig, amikor a játékos életereje csökken, a Godot le fogja futtatni a kapcsolódó kódrészletet.",
+		"Ha a zöld ikonra duplán kattintunk, meg is nézhetjük azt.",
 	])
 	bubble_add_task(
-		"Double-click the signal connection in the node dock.",
+		"Kattints duplán a [b]signal[/b] kapcsolatra a [b]Node Dock[/b]-ban.",
 		1,
 		func task_open_health_changed_signal_connection(task: Task) -> int:
 			if not interface.is_in_scripting_context():
@@ -461,10 +460,10 @@ func steps_050_signals() -> void:
 	highlight_code(17, 24)
 	bubble_move_and_anchor(interface.inspector_dock, Bubble.At.BOTTOM_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
-	bubble_set_title("The connected code")
+	bubble_set_title("A kapcsolódó kód")
 	bubble_add_text([
-		"The script editor reopens and focuses the view on the [b]set_health[/b] function.",
-			"A function is a name we give to multiple lines of code for easy reuse: in other game code, we can then use the function name to execute all the lines of code in the function.",
+		"Újra megnyílik a [b]Script Editor[/b] és a [b]set_health[/b] függvényhez ugrik.",
+			"A függvény (function) egy olyan név, amivel több sornyi kódot nevezhetünk el és használhatunk újra: más helyeken ezután elég csak a függvény nevét használni, hogy végrehajtassuk a benne foglalt több sornyi kódot.",
 	])
 	complete_step()
 
@@ -473,11 +472,11 @@ func steps_050_signals() -> void:
 	highlight_code(17, 17, 0, false, false)
 	bubble_move_and_anchor(interface.inspector_dock, Bubble.At.BOTTOM_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
-	bubble_set_title("The set_health function")
+	bubble_set_title("A set_health függvény")
 	bubble_add_text([
-		"This function updates the display of the player health bar.",
-		"Notice the green [b]Connected Signal[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.script_signal_connected) + " icon in the left margin of the script editor. When coding a game, it reminds you of existing signal connections.",
-		"So, each time the player health changes, the [b]Player[/b] node emits the [b]health_changed[/b] signal and, in turn, Godot runs the [b]set_health[/b] function that updates the health bar in the running game.",
+		"Ez a függvény a játékos életerő csíkját frissíti.",
+		"Figyeld meg a zöld [b]Connected Signal[/b] " + bbcode_generate_icon_image_string(ICONS_MAP.script_signal_connected) + " ikont a [b]Script Editor[/b] bal margóján. Amikor kódot írsz, ez emlékeztet a már létező [b]signal[/b] kapcsolatra.",
+		"Tehát, minden alkalommal, amikor a játékos életereje változik, a [b]Player node[/b] kibocsájtja a [b]health_changed signal[/b]-t, erre válaszul pedig a Godot lefuttatja a [b]set_health[/b] függvényt, ami frissíti az életerő jelző csíkot a futó játékban.",
 	])
 	complete_step()
 
@@ -485,11 +484,11 @@ func steps_050_signals() -> void:
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.TOP_RIGHT)
 	bubble_set_avatar_at(Bubble.AvatarAt.LEFT)
 	bubble_add_task_press_button(interface.run_bar_play_button)
-	bubble_set_title("Run the game")
+	bubble_set_title("Futtasd a játékot")
 	bubble_add_text(
-		["Run the game again and pay attention to the health bar in the top-left.",
-		"Move the player character to an enemy and touch them to lose health. You will see the health bar lose one point.",
-		"This happens thanks to the [b]health_changed[/b] signal connection.",]
+		["Indítsd el megint a játékot, és figyeld meg az életerő csíkot a bal felső sarokban.",
+		"Mozgasd a játékost egy ellenfélhez, hogy megsebezze. Látni fogod, hogy az életereje 1-gyel csökken.",
+		"Ez a [b]health_changed signal[/b] kapcsolatnak köszönhetően történik meg.",]
 	)
 	complete_step()
 
@@ -503,14 +502,14 @@ func steps_090_conclusion() -> void:
 	context_set_2d()
 	bubble_move_and_anchor(interface.canvas_item_editor, Bubble.At.CENTER)
 	bubble_set_avatar_at(Bubble.AvatarAt.CENTER)
-	bubble_set_title("In summary")
+	bubble_set_title("Összegzés")
 	bubble_add_text(
 		[
-			"Godot has four essential concepts on which your games rely: scenes, nodes, scripts, and signals.",
-			"[b]Scenes[/b] are reusable templates that represent anything in your game.",
-			"[b]Nodes[/b] are the building blocks of scenes. They are the elements you see in the viewport.",
-			"[b]Scripts[/b] are text files that give instructions to the computer. You can attach them to nodes to control their behavior.",
-			"And [b]Signals[/b] are events that nodes emit to report what's happening in the game. You can connect signals to scripts to run code when an event occurs.",
+			"A Godot engine 4 alappillére tehát:\n",
+			"[b]Scene[/b]-ek: újrafelhasználható sablonok, amik bármit jelképezhetnek a játékodban.",
+			"[b]Node[/b]-ok: a scene-ek építőelemei. Ezeket látod a [b]Viewport[/b]-ban.",
+			"[b]Script[/b]-ek: szövegfájlok, amelyek utasításokat adnak a számítógépnek. Node-okhoz rendelheted őket, hogy irányítsd a viselkedésüket.",
+			"[b]Signal[/b]-ok: olyan események, amelyeket a node-ok bocsájtanak ki, hogy tudassák, mi történik éppen a játékban. A signalokat scriptekhez kapcsolhatod, hogy lefuttass egy kódot, ha az adott esemény megtörténik.",
 		]
 	)
 	complete_step()
@@ -521,8 +520,8 @@ func steps_090_conclusion() -> void:
 	bubble_set_avatar_happy()
 	bubble_set_background(TEXTURE_BUBBLE_BACKGROUND)
 	bubble_add_texture(TEXTURE_GDQUEST_LOGO)
-	bubble_set_title("Congratulations on your first Godot Tour!")
-	bubble_add_text([("[center]Next, we'll practice and learn more by assembling a game[/center]")])
+	bubble_set_title("Gratulálunk az első Godot túrádhoz!")
+	bubble_add_text([("[center]Legközelebb többet is tanulunk,\negy játék elkészítésének lépésein keresztül[/center]")])
 	# TODO: add video of other parts here if on free version
 	bubble_set_footer((CREDITS_FOOTER_GDQUEST))
 	complete_step()

@@ -359,7 +359,7 @@ func bubble_add_task_press_button(button: Button, description := "") -> void:
 		else:
 			text = button.text
 	text = text.replace(".", "")
-	description = gtr("Press the [b]%s[/b] button.") % text
+	description = gtr("Nyomd meg a [b]%s[/b] gombot.") % text
 	bubble_add_task(
 		description,
 		1,

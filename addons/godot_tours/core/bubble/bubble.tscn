@@ -115,7 +115,7 @@ size_flags_horizontal = 0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 shortcut_in_tooltip = false
-text = "BACK"
+text = "VISSZA"
 flat = true
 
 [node name="StepCountLabel" type="Label" parent="MarginContainer/ViewContent/PanelContainer"]
@@ -183,14 +183,14 @@ alignment = 1
 [node name="Label" type="Label" parent="MarginContainer/ViewClose"]
 layout_mode = 2
 theme_type_variation = &"LabelTitle"
-text = "Close the tour?"
+text = "Befejezed a túrát?"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="MarginContainer/ViewClose"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_ul4l4")
-text = "Your progress will be lost."
+text = "A haladás el fog veszni."
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -203,7 +203,7 @@ alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 mouse_default_cursor_shape = 2
-text = "NO"
+text = "NEM"
 flat = true
 
 [node name="ButtonCloseYes" type="Button" parent="MarginContainer/ViewClose/HBoxContainer"]
@@ -218,7 +218,7 @@ theme_override_colors/font_focus_color = Color(0.415686, 0.0980392, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.415686, 0.0980392, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.415686, 0.0980392, 0, 1)
 shortcut_in_tooltip = false
-text = "YES"
+text = "IGEN"
 
 [node name="Avatar" parent="." instance=ExtResource("5_2y80m")]
 unique_name_in_owner = true

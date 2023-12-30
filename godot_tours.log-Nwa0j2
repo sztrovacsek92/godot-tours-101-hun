@@ -1,0 +1,12 @@
+2023-12-30T15:55:05:INFO: { "OS": "Linux", "video_adapter_driver_info": ["nvidia", "545.29.06"], "screen_size": (3840, 2160), "screen_dpi": 163, "screen_scale": 1, "cores": 12, "locale": "en_GB" }
+2023-12-30T15:55:05:INFO: [_step_commands: 0]
+Godot Engine v4.2.stable.official.46dc27791 - https://godotengine.org
+Vulkan API 1.3.260 - Forward Mobile - Using Vulkan Device #0: NVIDIA - NVIDIA GeForce GTX 980 Ti
+ 
+--- Debugging process stopped ---
+  Tween (bound to /root/@EditorNode@17095/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/Bubble): started with no Tweeners.
+Toggle Visible
+Toggle Visible
+Set text
+Set text
+

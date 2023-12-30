@@ -23,8 +23,8 @@ static var TaskPackedScene: PackedScene = null
 
 const TWEEN_DURATION := 0.1
 const LOCALES := {
-	PrevButton = {text = "BACK"},
-	NextButton = {text = "NEXT STEP"},
+	PrevButton = {text = "VISSZA"},
+	NextButton = {text = "KÖVETKEZŐ LÉPÉS"},
 }
 
 ## Location to place and anchor the bubble relative to a given Control node. Used in the function `move_and_anchor()` and by the `at` variable.

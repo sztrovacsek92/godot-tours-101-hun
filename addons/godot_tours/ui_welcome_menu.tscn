@@ -56,7 +56,7 @@ alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Welcome to Godot Tour!"
+text = "Üdv a Godot túrán!"
 
 [node name="ToursColumn" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -73,7 +73,7 @@ theme_override_colors/font_hover_color = Color(0.619608, 0.262745, 0.00392157, 1
 theme_override_colors/font_focus_color = Color(0.415686, 0.0980392, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.415686, 0.0980392, 0, 1)
 theme_override_font_sizes/font_size = 22
-text = "START LEARNING"
+text = "KEZDJÜK!"
 
 [node name="ButtonClose" type="Button" parent="PanelContainer/MarginContainer"]
 unique_name_in_owner = true
